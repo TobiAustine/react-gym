@@ -1,0 +1,126 @@
+nav{
+  height:5rem ;
+  width: 100vw;
+  background: var(--primary-color);
+  display: grid;
+  place-items: center;
+  position: fixed; 
+  top: 0;
+  left: 0;
+  z-index: 999;
+  margin-top: -5px;
+}
+
+
+.nav_container{
+    height: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   position: relative;
+} 
+
+.logo{
+    color: var(--gray-color-100); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    
+}
+
+
+
+.nav_links{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    font-size: 1.2rem;
+}
+
+.nav_links a:hover{
+    color: var(--secondary-color);
+    transition: var(--transition);
+}
+
+.nav_toggle_btn{
+    background: transparent;
+    display: none;
+}
+
+.active_nav{
+    position: relative;
+   
+}
+
+.active_nav::after{
+    content: '';
+    display: block;
+    width: 1.2rem;
+    height: 1.2rem;
+    background:  var(--primary-color);
+    position: absolute;
+    left: calc(50% - 0.6rem);
+    transform: rotate(45deg);
+    margin-top: 0.9rem ;
+   
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width:1024px) {
+    nav{
+       
+    }
+
+    .nav_toggle_btn{
+       display: inline-block; 
+       cursor: pointer;
+       color: var(--gray-color-100);
+       z-index: 999;
+    }
+
+    .nav_links li{
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav_links li a{
+        height: 100%;
+        width: 100%;
+    }
+
+    .nav_links_mobile, .nav_links_hidden{
+        position: absolute;
+        flex-direction: column;
+        /* left:0;
+        top: 100%; */
+        top: 100%;
+
+        width: 100%;
+        transition: var(--transition);
+        background: var(--gray-color-600);
+        padding: 2rem;
+        align-items: flex-start;
+        height: 50vh;
+        
+        
+    }
+
+    .nav_links_hidden{
+            /* left: -100%; */
+            top: -1500%;
+           
+    }
+
+    
+     .active_nav::after{
+        display: none;
+    }
+
+    .active_nav::after{
+        text-decoration: underline;
+    }
+}
+ 

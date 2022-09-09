@@ -1,0 +1,26 @@
+.faqs_container{
+      margin-top: 3rem  ;
+}
+
+.faqs_wrapper{
+   margin-top: 4rem;
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   gap: 2rem;
+   align-items: flex-start;
+}
+
+
+/*MEDIA QUERY*/
+@media screen and (max-width:1024px) {
+   .faqs_wrapper{
+      grid-template-columns: 1fr;
+   }
+}
+
+@media screen and (max-width:1024px){
+   .faqs_container{
+      margin-top: 4rem  ;
+}  
+}
+

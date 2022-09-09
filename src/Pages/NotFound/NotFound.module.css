@@ -1,0 +1,17 @@
+.notfound{
+    margin-top: 6rem;
+    text-align: center;
+    padding-top: 3rem;
+}
+
+.notfound h2{
+    margin-top: 2rem;
+}
+
+.home{
+    text-decoration: underline;
+}
+
+.home:hover{
+    color: var(--secondary-color);
+}

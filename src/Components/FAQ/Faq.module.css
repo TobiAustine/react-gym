@@ -1,0 +1,24 @@
+.faq > div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.faq{
+    background: var(--gray-color-500);
+    padding: 2rem;
+    border-radius: 1rem;
+    cursor: pointer;
+    pointer-events: inherit;
+}
+
+.faq p{
+    padding: 1rem 0;
+}
+
+.faq_button{
+    background: none;
+    color: var(--gray-color-100);
+    cursor: pointer;
+    font-size: 1.5rem;
+}

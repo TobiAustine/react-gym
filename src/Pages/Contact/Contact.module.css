@@ -1,0 +1,40 @@
+.contact{
+    margin-top: 5rem;
+}
+
+.contact_socials{
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(3, 1fr);
+    width: fit-content;
+    gap: 10rem;
+
+}
+
+.contact_socials a{
+    font-size: 2.5rem;
+    padding: 1.5rem;
+    background: var(--primary-color);
+    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid transparent;
+    transition: var(--transition);
+}
+
+.contact_socials a:hover{
+    border-color: var(--gray-color-100);
+    background: transparent;
+}
+
+@media screen and (max-width:600px) {
+    .contact_socials a{
+        font-size: 2rem;
+        padding: 1rem;
+    }
+
+    .contact_socials{
+        gap: 2.5rem;
+    }
+}
