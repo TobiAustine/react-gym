@@ -4,7 +4,6 @@ import Header from '../../Components/Header/Header'
 import HeaderBg from '../../images/gym4.avif'
 import img1 from '../../images/gym7.avif'
 import { plans } from '../../data'
-import Plan from '../../Components/Plan/Plan'
 import Card from '../../UI/Card'
 
 const Plans = () => {
@@ -20,7 +19,17 @@ const Plans = () => {
               <Card key={plan.id} className={styles.plan}>
               <h3>{plan.name}</h3>
               <small>{plan.desc}</small>
-              <h1>{`N${plan.price}`}</h1><h2>/mo</h2>
+              <h1>{`N${plan.price}`}</h1>
+              <h2>/mo</h2>
+              <h4>Features</h4>
+              {
+                plan.features.map((feature, id) =>{
+                  return(
+                    <p key={id} className={!feature.available ? styles.disabled : ''}> {feature.feature}</p>
+                  )
+                })
+              }
+              <button className='btn lg'> Choose Plan</button>
               </Card>
             )
           })}

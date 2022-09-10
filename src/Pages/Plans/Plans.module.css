@@ -1,3 +1,56 @@
 .plans{
     margin-top: 5rem;
 }
+
+.plans_container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+}
+
+.plan h3{
+    font-size: 2rem;
+}
+
+.plan small{
+    margin-bottom: 2rem;
+}
+
+.plan h1{
+    color:var(--primary-color-variant);
+    display: inline;
+}
+
+.plan h2{
+    display: inline;
+    color: var(--gray-color-400);
+}
+
+.plan h4{
+    margin-top: 2rem;
+}
+
+.plan p{
+    margin-top: 1rem;
+    color: var(--gray-color-100);
+}
+
+.plan p.disabled{
+    color: var(--gray-color-400);
+}
+
+.plans_container button{
+    margin-top: 5rem;
+    cursor: pointer;
+}
+
+@media screen and (max-width:600px) {
+    .plans_container{
+        grid-template-columns: 1fr;
+    }
+
+    .plan{
+        width: 90%;
+        margin-inline:auto ;
+    }
+}
