@@ -44,7 +44,7 @@ const Footer = () => {
     </div>
    
     <div className={styles.footer_copyright}>
-      <small> @ThatDivDoctor {new Date().getFullYear()}</small> 
+      <small> UI design from Egator, Developed by @ThatDivDoctor {new Date().getFullYear()}</small> 
 
     </div>
 
